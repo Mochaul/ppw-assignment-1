@@ -18,10 +18,10 @@ This repository hosts our PPW Tugas 1.
 * * *
 
 ## Code Coverage and Pipeline
-
+[![coverage report](https://gitlab.com/sabeb/ntaps/badges/master/coverage.svg)](https://gitlab.com/sabeb/ntaps/commits/master) [![pipeline status](https://gitlab.com/sabeb/ntaps/badges/master/pipeline.svg)](https://gitlab.com/sabeb/ntaps/commits/master)
 
 * * *
 
 ## Link Herokuapp
 
-ntaps.herokuapp.com
+https://ntaps.herokuapp.com

@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+import ntaps_profile.urls as ntaps_profile
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^ntaps-profile/', include(ntaps_profile,namespace='ntaps-profile')),
 ]

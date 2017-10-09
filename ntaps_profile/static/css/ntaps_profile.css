@@ -8,6 +8,24 @@
     display:block;
 }
 
+ul.exprestise {
+  padding: 0;
+  text-align: center;
+}
+
+.expertise li {
+  border-radius: 6px;
+  display: inline-block;
+  background: #ff9904;
+  color: white;
+  padding: 5px 10px;
+  margin: 2px;
+}
+
+.expertise li:nth-child(odd) {
+  background: #0399ff;
+}
+
 /*Textarea not resizeable*/
 textarea {
     resize:none

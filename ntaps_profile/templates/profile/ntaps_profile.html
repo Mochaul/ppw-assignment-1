@@ -4,10 +4,11 @@
 <h1><b>Profile</b></h1>
 <img class="img-circle" src="https://vignette.wikia.nocookie.net/spongebob/images/9/95/Hash.jpg/revision/latest?cb=20120624212303" alt = "Me">
 <h2><b><center>{{name}}</center></b></h2>
+<hr>
 <section name="profile">
-  <h3><center>Birthday {{birthday}}</center></h3>
-  <h3><center>Gender {{gender}}</center></h3>
-  <ul>
+  <h3><center>Birthday : {{birthday}}</center></h3>
+  <h3><center>Gender : {{gender}}</center></h3>
+  <ul class="expertise">
     {% for ii in expertise %}
     <li> {{ ii }} </li>
     {% endfor %}

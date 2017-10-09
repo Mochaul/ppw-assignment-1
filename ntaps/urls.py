@@ -20,5 +20,5 @@ import ntaps_profile.urls as ntaps_profile
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^ntaps-profile/', include(ntaps_profile,namespace='ntaps-profile')),
+    url(r'^profile/', include(ntaps_profile,namespace='profile')),
 ]

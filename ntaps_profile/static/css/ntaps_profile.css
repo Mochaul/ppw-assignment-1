@@ -1,0 +1,14 @@
+.navbar-static-top {
+  margin-bottom: 19px;
+}
+
+.img-circle {
+    border-radius: 50%;
+    margin: 0 auto;
+    display:block;
+}
+
+/*Textarea not resizeable*/
+textarea {
+    resize:none
+}

@@ -5,7 +5,6 @@ from django.http import HttpResponseRedirect
 response = {'author': "Hash Slinging Slasher"}
 about_me = ["Rusty spatula", "Red eyes", "A cook", "Male", "Ghost", "Clumsy"]
 def index(request):
-    response['content'] = landing_page_content
     html = 'ntaps_profile/profile.html'
     response['about_me'] = about_me
     return render(request, html, response)

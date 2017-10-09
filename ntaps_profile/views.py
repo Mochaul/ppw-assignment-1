@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from lab_2.views import landing_page_content
 from django.http import HttpResponseRedirect
 
 # Create your views here.

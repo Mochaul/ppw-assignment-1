@@ -17,8 +17,10 @@ from django.conf.urls import url
 from django.conf.urls import include
 from django.contrib import admin
 import ntaps_profile.urls as ntaps_profile
+import ntaps_add_friend.urls as ntaps_add_friend
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^profile/', include(ntaps_profile,namespace='profile')),
+    url(r'^add_friend/', include(ntaps_add_friend,namespace='add_friend')),
 ]

@@ -28,5 +28,10 @@ ul.exprestise {
 
 /*Textarea not resizeable*/
 textarea {
-    resize:none
+  resize:none
+}
+
+h3 {
+  width: 500px;
+  margin: auto;
 }

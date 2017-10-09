@@ -5,6 +5,6 @@ from django.http import HttpResponseRedirect
 response = {'author': "Hash Slinging Slasher"}
 about_me = ["Rusty spatula", "Red eyes", "A cook", "Male", "Ghost", "Clumsy"]
 def index(request):
-    html = 'ntaps_profile/ntaps_profile.html'
+    html = 'profile/ntaps_profile.html'
     response['about_me'] = about_me
     return render(request, html, response)

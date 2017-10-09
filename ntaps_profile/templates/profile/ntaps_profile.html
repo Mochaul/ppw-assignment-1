@@ -1,23 +1,18 @@
 {% extends "profile/layout/base.html" %}
 
 {% block content %}
-<h1>Portofolio</h1>
+<h1><b>Profile</b></h1>
 <img class="img-circle" src="https://vignette.wikia.nocookie.net/spongebob/images/9/95/Hash.jpg/revision/latest?cb=20120624212303" alt = "Me">
-<hr/>
-<section name="bio">
-    <!--<h2 align="center">Bio</h2>-->
-
-    <h2 align="center">
-        {{content}}
-    </h2>
-</section>
-<hr/>
-<section name="about_me">
-    <h2>About Me</h2>
-    <ul>
-        {% for ii in about_me %}
-        <li> {{ ii }} </li>
-        {% endfor %}
-    </ul>
+<h2><b><center>{{name}}</center></b></h2>
+<section name="profile">
+  <h3><center>Birthday {{birthday}}</center></h3>
+  <h3><center>Gender {{gender}}</center></h3>
+  <ul>
+    {% for ii in expertise %}
+    <li> {{ ii }} </li>
+    {% endfor %}
+  </ul>
+  <h3><center>Description {{description}}</center></h3>
+  <h3><center>Email {{email}}</center></h3>
 </section>
 {% endblock %}

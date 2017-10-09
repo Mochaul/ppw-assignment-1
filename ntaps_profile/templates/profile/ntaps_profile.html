@@ -6,13 +6,25 @@
 <h2><b><center>{{name}}</center></b></h2>
 <hr>
 <section name="profile">
+  <!--<table align="center" style="text-align: center">
+  	<tr>
+  	    <td id="subject">LALA</td>
+  	    <td id="value">LILI</td>
+  	</tr>
+    <tr>
+  	    <td class="subject">LALA</td>
+  	    <td class="value">LILI</td>
+  	</tr>
+  </table>-->
   <h3><b>Birthday</b> : {{birthday}}</h3>
   <h3><b>Gender</b> : {{gender}}</h3>
+  <div class="center">
   <ul class="expertise">
     {% for ii in expertise %}
     <li> {{ ii }} </li>
     {% endfor %}
   </ul>
+</div>
   <h3><b>Description</b> : {{description}}</h3>
   <h3><b>Email</b> : {{email}}</center></h3>
 </section>

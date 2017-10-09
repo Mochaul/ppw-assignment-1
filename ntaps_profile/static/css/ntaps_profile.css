@@ -13,6 +13,8 @@ ul.exprestise {
   text-align: center;
 }
 
+
+
 .expertise li {
   border-radius: 6px;
   display: inline-block;
@@ -31,7 +33,25 @@ textarea {
   resize:none
 }
 
+.center {
+  margin: auto;
+}
+
 h3 {
   width: 500px;
   margin: auto;
+}
+
+table, th, td {
+    border: 2px solid darkgrey;
+}
+.subject{
+    font-size: 20px;
+    font-family: "Calibri";
+    color: black;
+}
+.value{
+    font-size: 20px;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    color: snow;
 }

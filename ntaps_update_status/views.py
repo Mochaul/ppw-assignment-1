@@ -9,7 +9,6 @@ status_dict ={}
 
 response = {'author': "Ling In"} #TODO Implement yourname
 def index(request):
-    response['content'] = landing_page_content
     html = 'update_status/update_status.html'
     #TODO Implement, isilah dengan 6 kata yang mendeskripsikan anda
     response['status_form'] = Status_Form

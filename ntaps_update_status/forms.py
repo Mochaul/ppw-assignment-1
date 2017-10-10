@@ -4,8 +4,12 @@ class Status_Form(forms.Form):
     error_messages = {
         'required': 'Tolong isi status',
     }
-    attrs = {
-        'class': 'form-control'
+    description_attrs ={
+    	'type':'text',
+    	'cols':50,
+    	'rows':4,
+    	'class':'status-form-textarea'
+    	'placeholder':"What's on your mind?"
     }
 
     #name = forms.CharField(label='Nama', required=False, max_length=27, empty_value='Anonymous', widget=forms.TextInput(attrs=attrs))

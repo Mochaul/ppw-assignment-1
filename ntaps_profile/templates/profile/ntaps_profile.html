@@ -6,26 +6,35 @@
 <h2><b><center>{{name}}</center></b></h2>
 <hr>
 <section name="profile">
-  <!--<table align="center" style="text-align: center">
-  	<tr>
-  	    <td id="subject">LALA</td>
-  	    <td id="value">LILI</td>
-  	</tr>
-    <tr>
-  	    <td class="subject">LALA</td>
-  	    <td class="value">LILI</td>
-  	</tr>
-  </table>-->
-  <h3><b>Birthday</b> : {{birthday}}</h3>
-  <h3><b>Gender</b> : {{gender}}</h3>
-  <div class="center">
-  <ul class="expertise">
-    {% for ii in expertise %}
-    <li> {{ ii }} </li>
-    {% endfor %}
-  </ul>
-</div>
-  <h3><b>Description</b> : {{description}}</h3>
-  <h3><b>Email</b> : {{email}}</center></h3>
+  <div class="container" id="biodata">
+    <div class="row">
+      <div class="col-md-4"><h3><b>Birthday :</b></h3></div>
+      <div class="col-md-8"><h4>{{birthday}}</h4></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><h3><b>Gender :</b></h3></div>
+      <div class="col-md-8"><h4>{{gender}}</h4></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><h3><b>Expertise :</b></h3></div>
+      <div class="col-md-8"><h4>
+        <div class="center">
+        <ul class="expertise">
+          {% for ii in expertise %}
+          <li> {{ ii }} </li>
+          {% endfor %}
+        </ul>
+      </div></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><h3><b>Description :</b></h3></div>
+      <div class="col-md-8"><h4>{{description}}</h4></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><h3><b>Email :</b></h3></div>
+      <div class="col-md-8"><h4>{{email}}</h4></div>
+    </div>
+  </div>
 </section>
 {% endblock %}

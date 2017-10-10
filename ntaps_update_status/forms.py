@@ -8,7 +8,7 @@ class Status_Form(forms.Form):
     	'type':'text',
     	'cols':50,
     	'rows':4,
-    	'class':'status-form-textarea'
+    	'class':'status-form-textarea',
     	'placeholder':"What's on your mind?"
     }
 

@@ -6,13 +6,13 @@ class Add_Friend_Form(forms.Form):
     }
     name_attrs = {
         'type': 'text',
-        'class': 'todo-form-input',
+        'class': 'input-text',
         'placeholder':'Masukan nama teman kamu...'
     }
     url_attrs = {
         'type': 'text',
-        'class': 'todo-form-input',
-        'placeholder':'Masukan url tugas teman kamu...'
+        'class': 'input-text-inline-button',
+        'placeholder':'Masukan homepage tugas teman kamu...'
     }
 
     name = forms.CharField(label='Name', required=True, widget=forms.TextInput(attrs=name_attrs), error_messages=error_messages)

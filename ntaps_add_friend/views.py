@@ -7,7 +7,14 @@ from .forms import Add_Friend_Form
 response = {}
 def index(request):
     html = 'add_friend/ntaps_add_friend.html'
-    response['friends'] = Friend.objects.all()
+    response['offset'] = int(request.GET.get('offset', '0'))
+    response['next_offset'] = response['offset'] + 5;
+    response['prev_offset'] = response['offset'] - 5;
+    response['disable_next'] = True if response['next_offset'] > Friend.objects.all().count() else False;
+    response['disable_prev'] = True if response['prev_offset'] < 0 else False;
+    start = response['offset']
+    finish = response['offset'] + 5;
+    response['friends'] = Friend.objects.all().order_by('-created_at')[start:finish]
     response['add_friend_form'] = Add_Friend_Form
 
     return render(request, html, response)

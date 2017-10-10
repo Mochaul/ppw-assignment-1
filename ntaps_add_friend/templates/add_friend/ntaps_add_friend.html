@@ -1,24 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Add Friend</title>
-</head>
-<body>
-  <section name="form">
-    <h2>Add Friend</h2>
-    <form id="form" method="POST" action="{% url 'add_friend:create' %}">
-        {% csrf_token %}
-        {{ add_friend_form }}
-        <br>
-        <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-  </section>
-
-  <section name="friends">
-    <h2>List Friend</h2>
-    {% for friend in friends %}
-      <li> {{ friend.name }} | <a href="{{ friend.url }}">{{ friend.url }}</a> | Added {{ friend.created_at }} </li>
-    {% endfor %}
-  </section>
-</body>
-</html>
+{% extends "add_friend/layout/base.html" %}
+{% block content %}
+<div class="wrapper-page">
+  <div class="wrapper-kiri">
+      <div class="wrapper-content">
+        <h1 class="text-white">Add your friends!</h1>
+        <form method="POST" action="{% url 'add_friend:create' %}" class="form-main">
+          {% csrf_token %}
+          <div>
+            {{ add_friend_form.name }}
+          </div>
+          <div>
+            {{ add_friend_form.url }}<button type="submit" class="inline-button">Submit</button>
+          </div>
+        </form>
+      </div>
+  </div>
+  <div class="wrapper-kanan">
+    <div class="wrapper-content">
+      <h1>My friends
+        <span style="float: right">
+        {% if disable_prev %}
+        <a href="#" class="disabled">&#8249;</a>
+        {% else %}
+        <a href="{% url 'add_friend:index' %}?offset={{ prev_offset }}"">&#8249;</a>
+        {% endif %}
+        {% if disable_next %}
+        <a href="#" class="disabled">&#8250;</a>
+        {% else %}
+        <a href="{% url 'add_friend:index' %}?offset={{ next_offset }}">&#8250;</a>
+        {% endif %}
+        </span>
+      </h1>
+      <hr class="divider">
+      <div class="flex-list">
+        {% for friend in friends %}
+          <div class="flex-list-item friend-list-item">
+            <h3 >{{ friend.name }}</h3>
+            <a href="{{ friend.url }}"><h4>{{ friend.url }}</h4></a>
+            <h4><i>{{ friend.created_at }}</i></h4>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

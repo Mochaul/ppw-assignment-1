@@ -12,6 +12,9 @@
           <div>
             {{ add_friend_form.url }}<button type="submit" class="inline-button">Submit</button>
           </div>
+          {% for message in messages %}
+          <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+          {% endfor %}
         </form>
       </div>
   </div>
@@ -34,11 +37,11 @@
       <hr class="divider">
       <div class="flex-list">
         {% for friend in friends %}
-          <div class="flex-list-item friend-list-item">
-            <h3 >{{ friend.name }}</h3>
-            <a href="{{ friend.url }}"><h4>{{ friend.url }}</h4></a>
-            <h4><i>{{ friend.created_at }}</i></h4>
-          </div>
+        <div class="flex-list-item friend-list-item">
+          <h3 >{{ friend.name }}</h3>
+          <a href="{{ friend.url }}"><h4>{{ friend.url }}</h4></a>
+          <h4><i>{{ friend.created_at }}</i></h4>
+        </div>
         {% endfor %}
       </div>
     </div>

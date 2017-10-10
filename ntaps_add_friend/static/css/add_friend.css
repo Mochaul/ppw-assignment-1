@@ -75,6 +75,7 @@ h4 {
 .input-text-inline-button {
   height: 50px;
   width: 80%;
+  margin-bottom: 10px;
   border-radius: 5px 0px 0px 5px;
   border: none;
   padding-left: 15px;
@@ -102,6 +103,10 @@ h4 {
   background-color: #606062;
 }
 
-.navbar {
-  height: 10px;
+.error {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f2dede; /* Red */
+    color: #a94442;
+    margin-bottom: 10px;
 }

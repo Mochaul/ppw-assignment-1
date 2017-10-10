@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ntaps_profile',
     'ntaps_add_friend',
+    'ntaps_update_status',
 ]
 
 MIDDLEWARE = [

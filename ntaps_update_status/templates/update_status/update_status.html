@@ -1,0 +1,42 @@
+{% extends "update_status/layout/base.html" %}
+
+{% block content %}
+<section name="input-list" id="input-list">
+    <div class="container">
+        <h2 class="input-list-title"> Update Status</h2>
+        <form id="form" method="POST" action="{% url 'update_status:add_status' %}">
+            {% csrf_token %}
+            {{ status_form }}
+            <br>
+            <button type="submit" class="btn btn-default" style="float: right;">Post Status</button>
+            <br>
+        </form>
+    </div>
+</section>
+
+<section name="my-list" id="my-list">
+    <div class="container">
+        <h2 class="my-list-title">Recent Updates</h2>
+        <div class="flex">
+            {% for i in status %}
+            <div class="flex-item">
+                <div class="status-list">
+                    <div class="status-list-name">
+                    {{author}}
+                    </div>
+                <div class="status-list-time">
+                    {{i.created_date}}
+                </div>
+                <div class="status-list-status">
+                    {{i.status}}
+                </div>
+                <div class="status-list-delete">
+                    <div class="status-list-delete-button" data-id="{{data.id}}">Delete</div>
+                </div>
+            </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

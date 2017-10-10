@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Friend</title>
+</head>
+<body>
+  <section name="form">
+    <h2>Add Friend</h2>
+    <form id="form" method="POST" action="{% url 'add_friend:create' %}">
+        {% csrf_token %}
+        {{ add_friend_form }}
+        <br>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </section>
+
+  <section name="friends">
+    <h2>List Friend</h2>
+    {% for friend in friends %}
+      <li> {{ friend.name }} | <a href="{{ friend.url }}">{{ friend.url }}</a> | Added {{ friend.created_at }} </li>
+    {% endfor %}
+  </section>
+</body>
+</html>

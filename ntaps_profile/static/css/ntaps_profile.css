@@ -13,8 +13,6 @@ ul.exprestise {
   text-align: center;
 }
 
-
-
 .expertise li {
   border-radius: 6px;
   display: inline-block;
@@ -22,6 +20,7 @@ ul.exprestise {
   color: white;
   padding: 5px 10px;
   margin: 2px;
+  font-size: 1rem;
 }
 
 .expertise li:nth-child(odd) {
@@ -38,7 +37,6 @@ textarea {
 }
 
 h3 {
-  width: 500px;
   margin: auto;
 }
 
@@ -57,5 +55,5 @@ table, th, td {
 }
 
 #biodata{
-    
+    width: 760px;
 }

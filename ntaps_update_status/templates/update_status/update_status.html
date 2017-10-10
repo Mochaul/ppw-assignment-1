@@ -4,7 +4,7 @@
 <section name="input-list" id="input-list">
     <div class="container">
         <h2 class="input-list-title"> Update Status</h2>
-        <form id="form" method="POST" action="{% url 'update-status:add_status' %}">
+        <form id="form" method="POST" action="{% url 'update_status:add_status' %}">
             {% csrf_token %}
             {{ status_form }}
             <br>

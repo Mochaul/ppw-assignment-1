@@ -18,5 +18,5 @@ def index(request):
     #picture_url ?
 
     html = 'profile/ntaps_profile.html'
-    response['expertise'] = exp ertise
+    #response['expertise'] = exp ertise
     return render(request, html, response)

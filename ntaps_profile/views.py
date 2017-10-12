@@ -4,7 +4,7 @@ from .models import Profile
 
 # Create your views here.
 response = {'name': "Hash Slinging Slasher", 'birthday': "29 Feb", 'gender': "Unknown", 'description': "A dead Krusty Krab's cook", 'email': "hashslinging@krustykrab.bb"}
-expertise =
+expertise = ["Rusty spatula", "Red eyes", "A cook", "Missing", "Ghost", "Clumsy"]
 def index(request):
     profile = Profile.objects.first()
 

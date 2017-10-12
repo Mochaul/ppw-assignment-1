@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -11,7 +11,6 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <!-- LINK MENUJU table, dan link menuju home#form -->
         <li><a href="{% url 'update_status:index' %}#update_status">Status</a></li>
         <li><a href="{% url 'profile:index' %}#profile">Profile</a> </li>
         <li><a href="{% url 'add_friend:index' %}#add_friend">Friends</a> </li>

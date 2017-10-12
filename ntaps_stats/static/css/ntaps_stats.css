@@ -1,5 +1,6 @@
 .navbar-static-top {
   margin-bottom: 19px;
+  background-color: #9ddeff;
 }
 
 .navbar{
@@ -7,7 +8,7 @@
 }
 
 .footer{
-  background-color: #f8f8f8;
+  background-color: #9ddeff;
   margin-bottom: 0px;
   text-align: center;
 }
@@ -27,7 +28,7 @@
 }
 
 .navbarstatus{
-  width: 30px;
+  width: 25px;
   height: 25px;
 }
 

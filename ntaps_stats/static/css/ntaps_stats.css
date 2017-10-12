@@ -3,6 +3,12 @@
   background-color: #9ddeff;
 }
 
+.navbar-brand{
+  font-size: 25px;
+  font-family: 'Orbitron', sans-serif;
+  color: #35014c;
+}
+
 .navbar{
   margin-bottom: 0px;
 }

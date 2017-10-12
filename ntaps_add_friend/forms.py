@@ -5,7 +5,7 @@ class Add_Friend_Form(forms.Form):
         'required': 'Nama teman kamu wajib diisi',
     }
     url_error_messages = {
-        'required': 'Homepage teman kamu wajib diisi',
+        'required': 'Url teman kamu wajib diisi',
     }
     name_attrs = {
         'type': 'text',
@@ -15,7 +15,7 @@ class Add_Friend_Form(forms.Form):
     url_attrs = {
         'type': 'text',
         'class': 'input-text-inline-button',
-        'placeholder':'Masukan homepage tugas teman kamu...'
+        'placeholder':'Masukan url tugas teman kamu...'
     }
 
     name = forms.CharField(label='Name', required=True, widget=forms.TextInput(attrs=name_attrs), error_messages=name_error_messages)

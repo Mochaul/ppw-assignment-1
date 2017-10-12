@@ -3,7 +3,7 @@
 <div class="wrapper-page">
   <div class="wrapper-kiri">
       <div class="wrapper-content">
-        <h1 class="text-white">Add your friends!</h1>
+        <h1 class="friend-title text-white">Add your friends!</h1>
         <form method="POST" action="{% url 'add_friend:create' %}" class="form-main">
           {% csrf_token %}
           <div>
@@ -20,7 +20,7 @@
   </div>
   <div class="wrapper-kanan">
     <div class="wrapper-content">
-      <h1>My friends
+      <h1 class="friend-title">My friends
         <span style="float: right">
         {% if disable_prev %}
         <a href="#" class="disabled">&#8249;</a>
@@ -38,9 +38,9 @@
       <div class="flex-list">
         {% for friend in friends %}
         <div class="flex-list-item friend-list-item">
-          <h3 >{{ friend.name }}</h3>
-          <a href="{{ friend.url }}"><h4>{{ friend.url }}</h4></a>
-          <h4><i>{{ friend.created_at }}</i></h4>
+          <h4 class="list-item-title">{{ friend.name }}</h4>
+          <a href="{{ friend.url }}"><p class="list-item-content-text">{{ friend.url }}</p></a>
+          <p class="list-item-content-text"><i>{{ friend.created_at }}</i></p>
         </div>
         {% endfor %}
       </div>

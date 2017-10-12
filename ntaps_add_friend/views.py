@@ -26,7 +26,7 @@ def create(request):
     if (request.method == 'POST' and form.is_valid()):
         if (check_url(append_http(request.POST['url']))):
             response['name'] = request.POST['name']
-            response['url'] = request.POST['url']
+            response['url'] = append_http(request.POST['url'])
             friend = Friend(name=response['name'], url=response['url'])
             friend.save()
             return HttpResponseRedirect('/add_friend/')

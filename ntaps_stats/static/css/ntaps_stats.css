@@ -15,3 +15,23 @@
 .footer p{
   margin-bottom: 0px;
 }
+
+.navbaraddf{
+  width: 25px;
+  height: 25px;
+}
+
+.navbarprofile{
+  width: 25px;
+  height: 25px;
+}
+
+.navbarstatus{
+  width: 30px;
+  height: 25px;
+}
+
+.navbarstats{
+  width: 25px;
+  height: 25px;
+}

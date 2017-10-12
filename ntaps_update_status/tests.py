@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.test import Client
 from django.urls import resolve
-from .models import Status
+from .models import Status, Comment
 from .views import index
 from .forms import Status_Form
 
@@ -21,6 +21,12 @@ class UpdateStatusUnitTest(TestCase):
 		counting_all_available_status=Status.objects.all().count()
 		self.assertEqual(counting_all_available_status,1)
 		self.assertEqual(str(new_activity), new_activity.status)
+
+	def test_model_can_create_new_comment_and_has_str_function(self):
+		new_activity = Comment.objects.create(comment='menulis comment di status')
+		counting_all_available_comment=Comment.objects.all().count()
+		self.assertEqual(counting_all_available_comment,1)
+		self.assertEqual(str(new_activity), new_activity.comment)
 
 	def test_form_status_input_has_placeholder_and_css_classes(self):
 	    form = Status_Form()
@@ -51,3 +57,15 @@ class UpdateStatusUnitTest(TestCase):
 	    response= Client().get('/update_status/')
 	    html_response = response.content.decode('utf8')
 	    self.assertNotIn(test, html_response)
+
+	def test_lab5_delete_todo(self):
+		status = Status(status='ini akan didelete')
+		status.save()
+		response = Client().post('/update_status/delete_status', {'delete_id':status.id})
+		html_response = response.content.decode('utf8')
+		self.assertNotIn(status.status, html_response)
+
+#	def test_lab5_access_delete_todo_via_get(self):
+#		response = Client().get('/update_status/delete_status')
+#		html_response = response.content.decode('utf8')
+#		self.assertRedirects(response,'/update_status/',302,200)

@@ -35,17 +35,11 @@ def add_comment(request, pk):
 		comment=Comment(comment=response['comment'])
 		comment.status = status
 		comment.save()
-		#response['comment'] = request.POST['comment']
-		#comment = Comment(comment=response['comment'])
-		#comment.save()
-		#comment = form.save(commit=False)
-		#comment.status = status
-		#comment.save()
 		return redirect('/update_status/')
 	else:
 		return HttpResponseRedirect('/update_status/')
 
-def delete_status(request,object_id):
+def delete_status(request, object_id):
 	status = Status.objects.get(pk=object_id)
 	status.delete()
 	return HttpResponseRedirect('/update_status/')

@@ -14,4 +14,18 @@ class Status_Form(forms.Form):
 
     #name = forms.CharField(label='Nama', required=False, max_length=27, empty_value='Anonymous', widget=forms.TextInput(attrs=attrs))
     #email = forms.EmailField(required=False, widget=forms.EmailInput(attrs=attrs))
-    status = forms.CharField(widget=forms.Textarea(attrs=description_attrs), required=True)
+    status = forms.CharField(widget=forms.Textarea(attrs=description_attrs), required=True, label='')
+
+
+class Comment_Form(forms.Form):
+    error_messages ={
+        'required':'Tolong isi comment'
+    }
+    description_attrs ={
+        'type':'text',
+        'cols':30,
+        'rows':1,
+        'class':'comment-form-textarea',
+        'placeholder':'Please give a comment'
+    }
+    comment = forms.CharField(widget=forms.Textarea(attrs=description_attrs), required=True, label='')

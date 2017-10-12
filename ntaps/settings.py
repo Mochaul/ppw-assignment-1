@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'ntaps_profile',
     'ntaps_add_friend',
     'ntaps_update_status',
+    'ntaps_stats',
 ]
 
 MIDDLEWARE = [

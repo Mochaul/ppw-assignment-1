@@ -1,0 +1,12 @@
+{% extends "stats/layout/base.html" %}
+
+{% block content %}
+<h1><b>Statistics</b></h1>
+<img class="img-circle" src="https://vignette.wikia.nocookie.net/spongebob/images/9/95/Hash.jpg/revision/latest?cb=20120624212303" alt = "Me">
+<h2><b><center>{{name}}</center></b></h2>
+<hr>
+<section name = "statistics">
+  <h3><left>Friends : {{friends}}</left></h3>
+  <h3><right>Feed : {{feed}}</right></h3>
+</section>
+{% endblock %}

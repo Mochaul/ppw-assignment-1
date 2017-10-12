@@ -11,6 +11,7 @@
     <!-- bootstrap csss -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/add_friend.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ntaps_stats.css' %}" />
     <link href="https://fonts.googleapis.com/css?family=Nunito|Quicksand" rel="stylesheet">
     <title>
         Ntaps!
@@ -19,7 +20,7 @@
 
 <body>
     <header>
-        <!-- {% include "add_friend/partials/header.html" %} -->
+        {% include "stats/partials/header.html" %}
     </header>
     <content>
         {% block content %}
@@ -27,7 +28,7 @@
         {% endblock %}
     </content>
     <footer>
-            <!-- <p>This is a footer</p> -->
+        {% include "stats/partials/footer.html" %}
     </footer>
 
     <!-- Jquery n Bootstrap Script -->

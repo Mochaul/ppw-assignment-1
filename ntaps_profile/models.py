@@ -1,13 +1,12 @@
 from django.db import models
 
 class Profile(models.Model):
-    name = models.CharField(max_length=64)
-    email = models.EmailField()
-    birthday = models.DateField()
-    expertise =  models.TextField() # comma-separated
-    gender = models.CharField(max_length=8)
-    description = models.CharField(max_length=128)
-    picture_url = models.URLField()
+    name = 'Hash Slinging Slasher'
+    email = 'hashslinging@krustykrab.bb'
+    birthday = '29 Feb'
+    expertise = ["Rusty spatula", "Red eyes", "A cook", "Missing", "Ghost", "Clumsy"]
+    gender = 'Unknown'
+    description = "A dead Krusty Krab's cook"
 
     def __str__(self):
         return self.name + '(' + self.email + ')'

@@ -1,12 +1,14 @@
-h1 {
+.friend-title {
   font-family: 'Quicksand', sans-serif;
 }
-h3 {
+.list-item-title {
   margin-top: 10px;
   font-family: 'Nunito', sans-serif;
+  margin-bottom: 5px;
 }
-h4 {
+.list-item-content-text {
   font-family: 'Nunito', sans-serif;
+  margin-bottom: 3px;
 }
 
 .wrapper-page {
@@ -16,7 +18,7 @@ h4 {
 
 .wrapper-kiri {
   background: linear-gradient(to bottom right, #606062, #393939);
-  width: 70%;
+  flex-basis: 70%;
 
   display: flex;
   justify-content: center;
@@ -25,7 +27,7 @@ h4 {
 
 .wrapper-kanan {
   background-color: #D5D5D5;
-  width: 30%;
+  flex-basis: 30%;
 }
 
 .wrapper-content {
@@ -37,7 +39,7 @@ h4 {
 }
 
 .scrollable {
-  overflowrflow: scroll;
+  overflow: scroll;
 }
 
 .flex-list {
@@ -50,6 +52,7 @@ h4 {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 100%;
+  height: 15%;
 }
 
 .friend-list-item {
@@ -104,9 +107,44 @@ h4 {
 }
 
 .error {
-    border-radius: 5px;
-    padding: 10px;
-    background-color: #f2dede; /* Red */
-    color: #a94442;
-    margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f2dede; /* Red */
+  color: #a94442;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper-page {
+    display: block;
+  }
+
+  .wrapper-kiri {
+    height: 100%;
+  }
+
+  .wrapper-content {
+    margin-top: 0px;
+  }
+
+  .friend-title {
+    margin-top: 0px;
+    padding-top: 10px;
+  }
+
+  .form-main {
+    width: auto;
+  }
+
+  .input-text {
+    font-size: 14px;
+  }
+
+  .input-text-inline-button {
+    font-size: 14px;
+  }
+
+  .inline-button {
+    font-size: 14px;
+  }
 }

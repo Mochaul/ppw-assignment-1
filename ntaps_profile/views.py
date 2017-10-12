@@ -6,15 +6,14 @@ from .models import Profile
 response = {'name': "Hash Slinging Slasher", 'birthday': "29 Feb", 'gender': "Unknown", 'description': "A dead Krusty Krab's cook", 'email': "hashslinging@krustykrab.bb"}
 expertise = ["Rusty spatula", "Red eyes", "A cook", "Missing", "Ghost", "Clumsy"]
 def index(request):
-    profile = Profile.objects.first()
 
     #terus digimanain
-    name = profile.name
-    birthday = profile.birthday
-    gender = profile.gender
-    expertise = profile.expertise
-    email = profile.email
-    description = profile.description
+    name = Profile.name
+    birthday = Profile.birthday
+    gender = Profile.gender
+    expertise = Profile.expertise
+    email = Profile.email
+    description = Profile.description
 
     html = 'profile/ntaps_profile.html'
     response['expertise'] = expertise

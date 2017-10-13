@@ -1,20 +1,25 @@
 .navbar-static-top {
   margin-bottom: 19px;
-  background-color: #9ddeff;
+  background-color: #f38959;
 }
 
 .navbar-brand{
   font-size: 25px;
   font-family: 'Orbitron', sans-serif;
-  color: #35014c;
+  text-decoration-color: #35014c;
 }
 
 .navbar{
   margin-bottom: 0px;
 }
 
+.navbar-default .navbar-brand {
+  color: #9ddeff;
+  text-shadow: 2px 2px #15233d;
+}
+
 .footer{
-  background-color: #9ddeff;
+  background-color: #f38959;
   margin-bottom: 0px;
   text-align: center;
 }

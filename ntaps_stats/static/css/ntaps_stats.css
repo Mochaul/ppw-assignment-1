@@ -1,12 +1,11 @@
 .navbar-static-top {
   margin-bottom: 19px;
-  background-color: #f38959;
+  background-color: #a6ffde;
 }
 
 .navbar-brand{
   font-size: 25px;
   font-family: 'Orbitron', sans-serif;
-  text-decoration-color: #35014c;
 }
 
 .navbar{
@@ -14,12 +13,12 @@
 }
 
 .navbar-default .navbar-brand {
-  color: #9ddeff;
+  color: #f38959;
   text-shadow: 2px 2px #15233d;
 }
 
 .footer{
-  background-color: #f38959;
+  background-color: #a6ffde;
   margin-bottom: 0px;
   text-align: center;
 }
@@ -52,7 +51,7 @@ body{
   background-color: #fcb67a;
 }
 
-h6{
+.name-style{
   text-shadow: 2px 2px #54d9d8;
   color: #b0f3c8
 }

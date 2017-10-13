@@ -44,5 +44,10 @@
 }
 
 body{
-  background-color: #b0f3c8;
+  background-color: #fcb67a;
+}
+
+h6{
+  text-shadow: 2px 2px #54d9d8;
+  color: #b0f3c8
 }

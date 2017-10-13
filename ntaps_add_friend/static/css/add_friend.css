@@ -63,6 +63,7 @@
 }
 
 .flex-list-item {
+
   padding: 0 15px;
   flex-grow: 0;
   flex-shrink: 0;
@@ -72,10 +73,10 @@
 
 .friend-list-item {
   text-align: left;
-  background: #fff;
+  background: #fd96b4;
   position: relative;
   margin-bottom: 10px;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 10px 0 #e25d8a;
   word-wrap: break-word;
 }
 

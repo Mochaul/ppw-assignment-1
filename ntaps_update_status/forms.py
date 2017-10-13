@@ -6,7 +6,6 @@ class Status_Form(forms.Form):
     }
     description_attrs ={
     	'type':'text',
-    	'cols':50,
     	'rows':4,
     	'class':'status-form-textarea',
     	'placeholder':"What's on your mind?"
@@ -23,7 +22,6 @@ class Comment_Form(forms.Form):
     }
     description_attrs ={
         'type':'text',
-        'cols':30,
         'rows':1,
         'class':'comment-form-textarea',
         'placeholder':'Please give a comment'

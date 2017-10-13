@@ -4,8 +4,8 @@
 <div class="wrapper-page">
     <div class="wrapper-kiri">
         <div class="wrapper-content">
-        <h1 class="text-white">Update Status</h1>
-        <form id="form" method="POST" action="{% url 'update_status:add_status' %}" style="border-radius: 5px">
+        <h1 class="friend-title text-white">Update Status</h1>
+        <form id="form" method="POST" action="{% url 'update_status:add_status' %}" class="form-main">
             {% csrf_token %}
             {{ status_form }}
             <br>
@@ -16,16 +16,18 @@
     </div>
     <div class="wrapper-kanan">
         <div class="wrapper-content">
-        <h1> Recent Updates</h1>
+        <h1 class="recent-updates text-white"> Recent Updates</h1>
         <hr class="divider">
         <div class="scrollable">
         <div class="flex-list">
             {% for i in status %}
             <div class="flex-list-item friend-list-item">
                 <!-- <img class="img-circle" src="https://vignette.wikia.nocookie.net/spongebob/images/9/95/Hash.jpg/revision/latest?cb=20120624212303" alt = "Me" style="width: 50px; height: 50px;"> -->
-                <h3>{{author}}</h3>
-                <h4>{{i.status}}</h4>
-                <h5>{{i.created_date}}</h5>
+                <div class="flex-list-item-post">
+                    <h3>{{profile.name}}</h3>
+                    <h4>{{i.status}}</h4>
+                    <h5>{{i.created_date}}</h5>
+                </div>
                 <div class="flex-list-item-comment">
                     <div class="flex-list-item-comment-button" data-id="{{data.id}}">Comment</div>
                 </div>
@@ -39,14 +41,14 @@
                             <h3>Comment</h3>
                             {% if i.comment_set.all %}
                                 {% for comment in i.comment_set.all %}
-                                    <h4>{{author}}</h4>
+                                    <h4>{{profile.name}}</h4>
                                     <h5>{{comment.comment}}</h5>
                                     <h6>{{comment.created_date}}</h6>
                                 {% endfor %}
                             {% endif %}
                         </div>
                         <div class="comment-section-form">
-                        <form id="form" method="POST" action="{% url 'update_status:add_comment' pk=i.id%}" style="color: black">
+                        <form id="form" method="POST" action="{% url 'update_status:add_comment' pk=i.id%}" class="form-comment" style="color: black">
                             {% csrf_token %}
                             {{ comment_form }}
                             <input id="submit" type="submit" class="btn" value="Submit" style="bottom: -10px">

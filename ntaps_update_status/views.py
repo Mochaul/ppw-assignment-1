@@ -2,6 +2,7 @@ from django.http import HttpResponseRedirect
 from .forms import Status_Form, Comment_Form
 from .models import Status, Comment
 from django.shortcuts import render, redirect, get_object_or_404
+from ntaps_profile.models import Profile
 
 # Create your views here.
 
@@ -13,6 +14,7 @@ def index(request):
     #TODO Implement, isilah dengan 6 kata yang mendeskripsikan anda
     response['status_form'] = Status_Form
     response['comment_form'] = Comment_Form
+    response['profile'] = Profile
     status = Status.objects.all().order_by('-created_date')
     response['status'] = status
     return render(request, html, response)

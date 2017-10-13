@@ -53,6 +53,12 @@ table, th, td {
     font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
     color: snow;
 }
+#left{
+  padding-right: 0px;
+}
+#right{
+  padding-left: 0px;
+}
 
 #biodata{
     width: 760px;

@@ -13,7 +13,7 @@
 
 .wrapper-page {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .wrapper-kiri {

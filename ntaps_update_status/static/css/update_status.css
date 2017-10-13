@@ -1,5 +1,6 @@
-h1 {
-  font-family: 'Quicksand', sans-serif;
+.recent-updates{
+  font-family: "Quicksand", sans-serif;
+  color: black;
 }
 h3 {
   margin-top: 10px;
@@ -11,11 +12,11 @@ h4, h5, h6{
 
 .wrapper-page {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .wrapper-kiri {
-  background: linear-gradient(to bottom right, #606062, #393939);
+  background: #ea5f4a;
   width: 70%;
 
   display: flex;
@@ -24,7 +25,7 @@ h4, h5, h6{
 }
 
 .wrapper-kanan {
-  background-color: #D5D5D5;
+  background-color: #fcb67a;
   width: 30%;
 }
 
@@ -33,7 +34,7 @@ h4, h5, h6{
 }
 
 .form-main {
-  width: 500px;
+  width: 300px;
 }
 
 .scrollable {
@@ -100,6 +101,10 @@ h4, h5, h6{
   color: #FFFFFF;
 }
 
+.text-black{
+  color: black;
+}
+
 .divider {
   height: 1px;
   width:100%;
@@ -119,7 +124,7 @@ h4, h5, h6{
 .flex-list-item-comment {
   text-align: center;
   vertical-align: middle;
-  background: #606062;
+  background: #ea5f4a;
   color: #fff;
   padding: 10px;
   font-size: 16px;
@@ -168,7 +173,7 @@ h4, h5, h6{
 }
 
 .comment-section{
-  background: #606062;
+  background: #ea5f4a;
   color: #fff;
   padding: 10px;
   font-size: 16px;
@@ -190,4 +195,56 @@ h4, h5, h6{
 
 .comment-section-comment{
   margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper-page {
+    display: block;
+  }
+
+  .flex-list-item-delete {
+    object-position: top;
+  }
+
+  .wrapper-kiri {
+    width: 100%;
+    height: 100%;
+  }
+
+  .wrapper-kanan{
+    width: 100%;
+  }
+
+  .wrapper-content {
+    margin-top: 0px;
+  }
+
+  .friend-title {
+    margin-top: 0px;
+    padding-top: 10px;
+  }
+
+  .form-main {
+    width: auto;
+  }
+
+  .form-comment{
+    width: auto;
+  }
+
+  .flex-list-item-post{
+    width: 65%;
+  }
+
+  .input-text {
+    font-size: 14px;
+  }
+
+  .input-text-inline-button {
+    font-size: 14px;
+  }
+
+  .inline-button {
+    font-size: 14px;
+  }
 }

@@ -1,13 +1,27 @@
 {% extends "stats/layout/base.html" %}
 
 {% block content %}
-<h1><b>Statistics</b></h1>
-<img class="img-circle" src="https://vignette.wikia.nocookie.net/spongebob/images/9/95/Hash.jpg/revision/latest?cb=20120624212303" alt = "Me">
-<h2><b>{{profile.name}}</b></h2>
-<hr>
-<section name = "statistics">
-  <h3>Friends : {{friend_total}}</h3>
-  <h4>Feed : {{status_total}}</h4>
-  <h5>Latest Status : {{latest_status}}</<h5>
-</section>
+<div class="wrapper-page">
+  <div class="wrapper-tengah">
+    <div class="wrapper-content" style="width:500px;">
+      <div class="wrapper-content-center">
+        <img class="img-circle" src="https://vignette.wikia.nocookie.net/spongebob/images/9/95/Hash.jpg/revision/latest?cb=20120624212303" alt="Me" style="">
+        <div class="vertical-divider"></div>
+        <h1 style="word-wrap: break-word; text-align: left; font-size: 50px; width: 200px;">{{ name }}</h1>
+      </div>
+      <div class="wrapper-content-center" style="justify-content: space-between">
+        <h2 class="flex-item">Friends: {{ friend_total }}</h2>
+        <h2 class="flex-item">Feeds: {{ status_total }}</h2>
+      </div>
+      <hr class="divider">
+      <div class="wrapper-content-center">
+        <div class="flex-item friend-list-item" style="flex-basis: 100%; padding: 10px">
+          <h3 style="margin-top: 10px">Latest Post:</h3>
+          <h2>{{ latest_status.status }}</h2>
+          <h4><i>{{ latest_status.created_date }}</i></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

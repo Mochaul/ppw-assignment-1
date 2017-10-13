@@ -83,6 +83,14 @@ class UpdateStatusUnitTest(TestCase):
 		html_response = response.content.decode('utf8')
 		self.assertIn('ini comment', html_response)
 
+	def test_add_comment_error(self):
+		status = Status(status='ini akan dicomment')
+		status.save()
+		response_post = Client().post('/update_status/add_comment/{}/'.format(status.id), data={'comment':''})
+		response = Client().get('/update_status/')
+		html_response = response.content.decode('utf8')
+		self.assertNotIn('ini comment', html_response)
+
 	# def test_update_comment_post_success_and_render_the_result(self):
 	#     test = 'Anonymous'
 	#     response_post = Client().post('/update_status/add_comment', {'comment': test})

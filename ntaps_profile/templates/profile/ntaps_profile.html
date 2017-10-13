@@ -16,16 +16,15 @@
       <div class="col-md-8"><h4>: {{gender}}</h4></div>
     </div>
     <div class="row">
-      <div class="col-md-3"><h3><b>Expertise</b></h3></div>
-      <div class="col-md-1" style="text-align:right" id="left"><h4>:</h4></div>
-      <div class="col-md-8" id="right"><h3>
+      <div class="col-md-4"><h3><b>Expertise</b></h3></div>
+      <div class="col-md-8"><h4>
         <div class="center">
-          <ul class="expertise">
+          :<ul class="expertise" style="padding-left:0; display: inline;">
             {% for ii in expertise %}
             <li> {{ ii }} </li>
             {% endfor %}
           </ul>
-        </div></h3>
+        </div></h4>
       </div>
     </div>
     <div class="row">

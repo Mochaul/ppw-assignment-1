@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.views.generic.base import RedirectView
 from django.conf.urls import url
 from django.conf.urls import include
 from django.contrib import admin
@@ -26,5 +27,6 @@ urlpatterns = [
     url(r'^profile/', include(ntaps_profile,namespace='profile')),
     url(r'^add_friend/', include(ntaps_add_friend,namespace='add_friend')),
     url(r'^update_status/', include(ntaps_update_status,namespace='update_status')),
-    url(r'^stats/', include(ntaps_stats,namespace='stats'))
+    url(r'^stats/', include(ntaps_stats,namespace='stats')),
+    url(r'^$', RedirectView.as_view(permanent=True, url='/update_status/'))
 ]

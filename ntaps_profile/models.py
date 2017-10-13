@@ -1,12 +1,9 @@
 from django.db import models
 
 class Profile(models.Model):
-    name = 'Hash Slinging Slasher'
-    email = 'hashslinging@krustykrab.bb'
-    birthday = '29 Feb'
-    expertise = ["Rusty spatula", "Red eyes", "A cook", "Missing", "Ghost", "Clumsy"]
-    gender = 'Unknown'
-    description = "A dead Krusty Krab's cook"
-
-    def __str__(self):
-        return self.name + '(' + self.email + ')'
+    name = models.CharField(max_length=30)
+    birthday = models.CharField(max_length=30)
+    gender = models.CharField(max_length=30)
+    expertise = models.CharField(max_length=140)
+    description = models.CharField(max_length=140)
+    email = models.EmailField()

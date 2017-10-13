@@ -23,12 +23,11 @@
         {% include "stats/partials/header.html" %}
     </header>
     <content>
-        <div class="container">
+        <div class="container" style="min-height: 100vh">
             {% block content %}
                 <!-- content goes here -->
             {% endblock %}
         </div>
-
     </content>
     <footer>
         {% block footer %}
